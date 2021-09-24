@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Planet</title>
+
+</head>
+
+<body>
+
+    <table border="1">
+        <tr>
+            <th>Planet</th>
+            <th>Distance</th>
+            <th>Diameter</th>
+        </tr>
+        <tr>
+            <td>Mercury </td>
+            <td>36milion </td>
+            <td>3,100 miles</td>
+        </tr>
+        <tr>
+            <td> Venus</td>
+            <td>67 millions miles</td>
+            <td>7,700 miles</td>
+        </tr>
+        <tr>
+            <td>Earth </td>
+            <td> 93 million miles</td>
+            <td> 7,920 miles</td>
+        </tr>
+        <tr>
+            <td>Mars </td>
+            <td> 141 million miles</td>
+            <td> 4200 miles</td>
+        </tr>
+    </table><br><br>
+    <input type="text" name="search" id="srch">
+    <button onclick="searchPlanet()">Serach</button>
+
+    <script type="text/javascript">
+        var planet = new Array('Mercury', 'Venus', 'Earth', 'Mars');
+        var Distance = new Array('36 million', '67 million miles', '93 million miles', '141 million miles');
+        var Diameter = new Array('3100 miles', '7700 Miles', '7920 Miles', '4200 Miles');
+
+        function searchPlanet() {
+            planetname = document.getElementById("srch").value;
+            planetindex = planet.indexOf(planetname);
+            document.write("<h2>" + planetname + "</h2>" + "<h2>" + Distance[planetindex] + "</h2>" + "<h2>" + Diameter[planetindex] + "</h2>");
+        }
+    </script>
+</body>
+
+</html>

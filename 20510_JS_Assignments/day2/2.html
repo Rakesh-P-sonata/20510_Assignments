@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UPPERCASE</title>
+
+</head>
+
+<body>
+    Input: <input type="text" id="IP"><br>
+    Output: <input type="text" id="OP">
+    <button onclick="Upper()">Convert!!</button>
+    <script type="text/javascript">
+        function Upper() {
+            outputVal = document.getElementById("IP").value.toUpperCase();
+            document.getElementById("OP").value = outputVal;
+        }
+    </script>
+</body>
+
+</html>
