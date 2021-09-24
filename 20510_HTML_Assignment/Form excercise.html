@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form design</title>
+    <style>
+        body {
+            align-items: center;
+            background-color: #000;
+            display: flex;
+            color: blanchedalmond;
+            justify-content: center;
+        }
+
+        form {
+            background-color: #15172b;
+            border-radius: 20px;
+            box-sizing: border-box;
+            height: 600px;
+            padding: 20px;
+            width: 620px;
+            margin: 50px;
+        }
+
+        input {
+            margin: 5px;
+            padding: 2px;
+        }
+
+        #submit {
+            background-color: #08d;
+            border-radius: 12px;
+            box-sizing: border-box;
+            color: #eee;
+            cursor: pointer;
+            font-size: 18px;
+            height: 50px;
+            margin-top: 38px;
+            text-align: center;
+            width: 100%;
+        }
+
+        h1 {
+            color: #08d;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="placeh">
+        <h1>Register for a CBT based training</h1>
+        <label for="EmployeeID">Employee ID :</label>
+        <input type="number" id="EmployeeID" name="EmployeeID" required><br>
+
+        <label for="Employeename">Employee Name :</label>
+        <input type="text" id="Employeename" name="Employeename" required><br>
+
+        <label for="Contact">Contact No :</label>
+        <input type="tel" id="Contact" name="Contact" required maxlength="10"><br>
+
+        <label for="mail">Email :</label>
+        <input type="email" id="mail" name="mail" required><br>
+
+        <label>Choose a Technology:</label>
+        <input type="checkbox" id="Tech" name="Tech" value="webdev">
+        <label for="course">Webdev</label>
+
+        <input type="checkbox" id="Tech" name="Tech" value="ML">
+        <label for="course">ML</label>
+
+        <input type="checkbox" id="Tech" name="Tech" value="RPA">
+        <label for="course">RPA</label><br><br>
+
+        <label>Choose a Course: </label>
+
+        <input type="radio" id="course" name="course" value="HTML">
+        <label for="course">HTML</label>
+
+        <input type="radio" id="course" name="course" value="CSS">
+        <label for="course">CSS</label>
+
+        <input type="radio" id="course" name="course" value="Python">
+        <label for="course">Python</label><br>
+
+        <label>Preferred date :</label>
+
+        <label for="sdate">Start date :</label>
+        <input type="date" id="sdate" name="sdate">
+        <label for="edate">End date :</label>
+        <input type="date" id="edate" name="edate"><br>
+
+        <label for="OtherFacilities">Other Facilities : </label>
+
+        <select name="OtherFacilities" id="OtherFacilities">
+            <option value="">Virtual Lab
+            </option>
+            <option value="">Online QUIZ
+            </option>
+            <option value="">Online Instructor (to clarify doubts)</option>
+        </select><br>
+
+        <input type="submit" id="submit">
+    </form>
+
+</body>
+
+</html>
