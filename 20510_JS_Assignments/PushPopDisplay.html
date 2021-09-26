@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Final</title>
+
+</head>
+
+<body>
+
+    Name: <input id="n" type="text"><br />
+    Address: <input id="a" type="text"><br />
+    email: <input type="email" id="em"><br />
+    City: <input type="text" id="ci"><br />
+    State: <input type="text" id="st"><br />
+    zip: <input type="number" id="zp"><br />
+    Phone no:<input type="number" id="ph"><br />
+
+    <button onclick="registerform()"> Validate</button>
+
+    <button onclick="display()"> Display</button>
+
+    <button onclick="epop()"> Pop</button>
+
+
+    <script>
+        var empDet = new Array();
+
+        function registerform() {
+            var n = document.getElementById("n").value;
+            var a = document.getElementById("a").value;
+            var em = document.getElementById("em").value;
+            var ci = document.getElementById("ci").value;
+            var st = document.getElementById("st").value;
+            var zp = document.getElementById("zp").value;
+            var ph = document.getElementById("ph").value;
+
+            if (n == null || n == "") {
+                alert("Name can't be blank");
+                return false;
+            } else if (zp < 4) {
+                alert("zip must be entered correctly.");
+                return false;
+            } else if (a == null || a == "") {
+                alert("address can't be blank");
+                return false;
+            } else if (ci == null || ci == "") {
+                alert("city can't be blank");
+                return false;
+            } else if (st == null || st == "") {
+                alert("state can't be blank");
+                return false;
+            } else if (ph < 10) {
+                alert("Phone number should be>9 char");
+                return false;
+            }
+            else {
+                empDet.push({ name: n, Address: a, email: em, City: ci, State: st, zip: zp, Phone_no: ph });
+                console.log(empDet);
+                return true;
+            }
+
+        }
+
+
+        function display() {
+
+            if (empDet.length > 0) {
+                for (i = 0; i < empDet.length; i++) {
+                    var d = document.createElement('DIV');
+                    var br = document.createElement('HR');
+                    d.id = "newd" + i;
+                    var t = document.createTextNode(i + ". Name: " + empDet[i].name + " ,  Address: " + empDet[i].Address + " ,  Email: " + empDet[i].email + " , City: " + empDet[i].City + " , State:" + empDet[i].State + " ,  Zip Code:" + empDet[i].zip + "  ,  Phone No: " + empDet[i].Phone_no + ".");
+                    d.appendChild(t);
+                    document.body.appendChild(d);
+                    document.body.appendChild(br);
+                }
+            } else {
+                alert("Nothing to display");
+            }
+        }
+
+        function epop() {
+            var poped = empDet.pop();
+            console.log(poped);
+        }
+
+
+    </script>
+</body>
+
+</html>
